@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-03 13:56+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\admin.py:14
+msgid "Interactive Point"
+msgstr "Interaktiver Punkt"
+
+#: .\cms_plugins.py:10
+msgid "Interactive Image"
+msgstr "Interaktives Bild"
+
+#: .\forms.py:12
+msgid "Points"
+msgstr "Punkte"
+
+#: .\models.py:9 .\models.py:26
+msgid "Title"
+msgstr "Titel"
+
+#: .\models.py:10
+msgid "Image"
+msgstr "Bild"
+
+#: .\models.py:27
+msgid "Description"
+msgstr "Beschreibung"
+
+#: .\models.py:28
+msgid "Pages"
+msgstr "Seiten"
+
+#: .\templates\interactive_image_plugin.html:24
+msgid "Further Information"
+msgstr "Weiterführende Informationen"
+
+#: .\widgets.py:17
+msgid "Please add an image first and save the current dialog"
+msgstr "Bitte fügen Sie zuerst ein Bild hinzu und speichern Sie dann den Dialog"
+
+
+#: .\widgets.py:31
+msgid "Add"
+msgstr "Hinzufügen"
+
+#: .\widgets.py:33
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: .\widgets.py:35
+msgid "Delete"
+msgstr "Löschen"

@@ -1,0 +1,40 @@
+{% load cms_tags %}
+{% load i18n %}
+{% if instance.title %}
+    <h1>{{ instance.title }}</h1>
+{% endif %}
+
+{% if instance.image.url != "" %}
+    <div class="interactive-image">
+        <div class="imgContainer">
+            <img src="{{ instance.image.url }}"/>
+        </div>
+
+        {% for point in instance.interactivepoint_set.all %}
+            <div class="interactive-point-container"
+                 style="top: {{ point.yCoordinate }}px; left: {{ point.xCoordinate }}px"
+                 data-top="{{ point.yCoordinate }}px" data-left="{{ point.xCoordinate }}px">
+                <div class="interactive-point"></div>
+                <div class="interactive-point-detail">
+                    <h2>{{ point.title }}</h2>
+
+                    <p>{{ point.description }}</p>
+
+                    {% if point.pages.all %}
+                        <h3>{% trans "Further Information" %}</h3>
+                        <ul>
+                            {% for page in point.pages.all %}
+                                {% if request.toolbar.edit_mode or page.publication_date %}
+                                    <li><a href="{% page_url page %}">{% page_attribute "page_title" page %}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+
+        <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="{{ STATIC_URL }}js/interactiveImage.js"></script>
+    </div>
+{% endif %}

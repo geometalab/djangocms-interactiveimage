@@ -1,0 +1,18 @@
+{% extends change_form_template|default:"admin/cms/page/plugin/change_form.html" %}
+{% load admin_static %}
+
+{% block after_field_sets %}
+    <script type="text/javascript">
+        window.onload = function(){
+            var addButton = document.getElementById("add_id_temp_points");
+            if (addButton) {
+                addButton.href = addButton.href + "&image={{ original.image.url }}&_interactive_image_id={{ original.id }}";
+            }
+            var changeButton = document.getElementById("change_id_temp_points");
+            if (changeButton) {
+                changeButton.href = changeButton.href + "&image={{ original.image.url }}&_interactive_image_id={{ original.id }}";
+            }
+            toggleEditLinks();
+        }
+    </script>
+{% endblock %}

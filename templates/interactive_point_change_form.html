@@ -1,0 +1,15 @@
+{% extends change_form_template|default:"admin/cms/page/plugin/change_form.html" %}
+{% load admin_static %}
+
+{% block after_field_sets %}
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+    <div id="editImgContainer">
+        <img id="interactive_image" src="" />
+
+        <div class='interactive-point' style="display: none;"></div>
+    </div>
+    <link href="{{ STATIC_URL }}css/interactiveImageStyle.css" rel="stylesheet">
+    <script type="text/javascript" src="{{ STATIC_URL }}lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/interactivePointChange.js"></script>
+
+{% endblock %}
